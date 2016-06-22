@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Query: #{query}
+    textarea(rows="10" cols="100")=JSON.stringify(data, null, 4)
+    h2 Demo output:
+    ul
+        each val in links
+            li
+                a(href=val target="_blank")=val
